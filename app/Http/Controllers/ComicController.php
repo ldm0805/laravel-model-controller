@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//Richiamo Comic
 use App\Models\Comic as Comic;
 
 class ComicController extends Controller
+//Esercizio base
 {
     public function getAllCards(){
         $products = Comic::all();
@@ -14,7 +16,9 @@ class ComicController extends Controller
         $productsocial = config('comics.social');
         return view('index', compact('products','productsmenu','productsicon','productsocial'));
     }
-    // public function show($id){
+
+    //Metodo find bouns 1
+    // public function getDetailedCards($id){
 
     //     $comic = Comic::find($id);
     //     $single = [
@@ -33,8 +37,8 @@ class ComicController extends Controller
         
     // }
 
-    //Metodo Slug
-    public function getDetailedCards($slug){
+    //Metodo Slug Bonus 2
+    public function getDetailedCard($slug){
 
         $comic = Comic::where('slug', $slug)->get();
         $comic = $comic[0];

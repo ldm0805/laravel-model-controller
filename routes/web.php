@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//Richiamo ComicController
 use App\Http\Controllers\ComicController as ComicController;
 
 
@@ -14,12 +15,13 @@ use App\Http\Controllers\ComicController as ComicController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //Route della pagina principale
 Route::get('/', [ComicController::class, 'getAllCards'])->name('homepage');
-//Route della seconda pagina
-Route::get('/single-card/{slug}', [ComicController::class, 'getDetailedCards'])->name('single-card');
+//Route della seconda pagina con il comic in dettaglio
+Route::get('/single-card/{slug}', [ComicController::class, 'getDetailedCard'])->name('single-card');
 
-//Funzione per cambiare la data
+//Funzione per cambiare il formato data
 function changeDate($saleDate)
 {
     $date = $saleDate['sale_date'];
