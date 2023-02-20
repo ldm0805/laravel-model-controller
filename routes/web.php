@@ -19,4 +19,9 @@ Route::get('/', [ComicController::class, 'gaspare'])->name('homepage');
 //Route della seconda pagina
 Route::get('/single-card/{slug}', [ComicController::class, 'show'])->name('single-card');
 
-
+//Funzione per cambiare la data
+function changeDate($saleDate)
+{
+    $date = $saleDate['sale_date'];
+    return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('M d Y');
+}

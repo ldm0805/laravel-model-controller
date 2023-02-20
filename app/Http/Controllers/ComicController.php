@@ -12,7 +12,7 @@ class ComicController extends Controller
         $productsmenu = config('comics.menu');
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        return view('index',compact('products','productsmenu','productsicon','productsocial'));
+        return view('index', compact('products','productsmenu','productsicon','productsocial'));
     }
     // public function show($id){
 
@@ -44,14 +44,7 @@ class ComicController extends Controller
         $productsmenu = config('comics.menu');
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        // function changeDate($saleDate)
-        // {
-            //     $date = $saleDate['sale_date'];
-            //     return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('M d Y');
-            // }
-            
-            return view('single-card',$single ,compact( 'productsmenu', 'productsicon', 'productsocial'))->with('changeDate');
+            return view('single-card',$single ,compact( 'productsmenu', 'productsicon', 'productsocial'));
             
         }
-
 }
