@@ -17,6 +17,6 @@ use App\Http\Controllers\ComicController as ComicController;
 
 Route::get('/', [ComicController::class, 'gaspare'])->name('homepage');
 
-Route::get('/single-card/{id}', [ComicController::class, 'show'])->name('single-card');
+Route::get('/single-card/{slug}', [ComicController::class, 'show'])->name('single-card');
 
 
