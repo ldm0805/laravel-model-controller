@@ -37,6 +37,7 @@ class ComicController extends Controller
     public function show($slug){
 
         $comic = Comic::where('slug', $slug)->get();
+        $comic = $comic[0];
         $single = [
             'single' => $comic
         ];

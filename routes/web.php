@@ -14,9 +14,9 @@ use App\Http\Controllers\ComicController as ComicController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route della pagina principale
 Route::get('/', [ComicController::class, 'gaspare'])->name('homepage');
-
+//Route della seconda pagina
 Route::get('/single-card/{slug}', [ComicController::class, 'show'])->name('single-card');
 
 
