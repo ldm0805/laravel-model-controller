@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController as ComicController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $products = config('comics.fumetti');
-    $productsmenu = config('comics.menu');
-    $productsicon = config('comics.icon');
-    $productsocial = config('comics.social');
-
-    return view('index', compact('products','productsmenu','productsicon','productsocial'));
-})->name('homepage');
+Route::get('/', [ComicController::class, 'gaspare'])->name('homepage');
 
 Route::get('/single-card/{id}', function ($id) {
     $products = config('comics.fumetti');
