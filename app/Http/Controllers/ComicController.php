@@ -7,7 +7,7 @@ use App\Models\Comic as Comic;
 
 class ComicController extends Controller
 {
-    public function gaspare(){
+    public function getAllCards(){
         $products = Comic::all();
         $productsmenu = config('comics.menu');
         $productsicon = config('comics.icon');
@@ -34,7 +34,7 @@ class ComicController extends Controller
     // }
 
     //Metodo Slug
-    public function show($slug){
+    public function getDetailedCards($slug){
 
         $comic = Comic::where('slug', $slug)->get();
         $comic = $comic[0];

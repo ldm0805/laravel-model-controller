@@ -15,9 +15,9 @@ use App\Http\Controllers\ComicController as ComicController;
 |
 */
 //Route della pagina principale
-Route::get('/', [ComicController::class, 'gaspare'])->name('homepage');
+Route::get('/', [ComicController::class, 'getAllCards'])->name('homepage');
 //Route della seconda pagina
-Route::get('/single-card/{slug}', [ComicController::class, 'show'])->name('single-card');
+Route::get('/single-card/{slug}', [ComicController::class, 'getDetailedCards'])->name('single-card');
 
 //Funzione per cambiare la data
 function changeDate($saleDate)
