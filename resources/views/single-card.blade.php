@@ -42,14 +42,14 @@
     <div class="talentspecs">
         <div class="talent col-6">
             <h2>Talent</h2>
-            <p>Art by: <a href="#"> {{implode(', ', $single['artists'])}} </a></p>
-            <p>Written by: <a href="#"> {{implode(', ', $single['writers'])}} </a></p>
+            {{-- <p>Art by: <a href="#"> {{implode(', ', $single['artists'])}} </a></p>
+            <p>Written by: <a href="#"> {{implode(', ', $single['writers'])}} </a></p> --}}
         </div>
         <div class="specs col-4">
             <h2>Specs</h2>
             <p>Series: <a href="#">{{$single['series']}}</a></p>
             <p>U.S. Price: {{$single['price']}}</p>
-            <p>On Sale Date: {{ changeDate($single) }}</p>    
+            {{-- <p>On Sale Date: {{ changeDate($single) }}</p>     --}}
         </div>
     </div>
 </div>
