@@ -18,7 +18,7 @@ class ComicController extends Controller
     }
 
     //Metodo find bouns 1
-    // public function getDetailedCards($id){
+    // public function shows($id){
 
     //     $comic = Comic::find($id);
     //     $single = [
@@ -38,7 +38,7 @@ class ComicController extends Controller
     // }
 
     //Metodo Slug Bonus 2
-    public function getDetailedCard($slug){
+    public function show($slug){
 
         $comic = Comic::where('slug', $slug)->get();
         $comic = $comic[0];
