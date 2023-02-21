@@ -14,7 +14,7 @@ class ComicController extends Controller
         $productsmenu = config('comics.menu');
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        return view('index', compact('products','productsmenu','productsicon','productsocial'));
+        return view('main-content', compact('products','productsmenu','productsicon','productsocial'));
     }
 
     //Metodo find bouns 1
